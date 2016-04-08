@@ -1,3 +1,13 @@
+$background-grey: #bdc3c7;
+
+#title {
+  height: 50px;
+  padding-left: 15px;
+  padding-top: 9px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: $background-grey;
+}
 h2 {
   color: red;
 }
@@ -5,10 +15,10 @@ h2 {
 .nav {
   float: right;
   list-style-type: none;
-  background-color: grey;
-  margin-right: -8px;
+  background-color: $background-grey;
+  margin-right: 0;
   padding: 0;
   width: 200px;
-  display: block;
-  height: 1000px;
+  display: inherit;
+  height: 1100px;
 }
