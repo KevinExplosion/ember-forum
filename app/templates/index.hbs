@@ -7,9 +7,7 @@
 <hr>
   <ul>
     {{#each model as |answer|}}
-      <p>{{answer.title}}</p>
-      <p>{{answer.body}}</p>
-      <hr>
+      {{answer-tile answer=answer}}
     {{/each}}
   </ul>
 

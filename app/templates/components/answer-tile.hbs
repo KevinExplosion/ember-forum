@@ -1,0 +1,8 @@
+{{#if isAnswerDetailed}}
+  <li>{{answer.title}} | {{answer.author}}</li>
+    <p {{action 'answerHide'}}>{{answer.body}}</p>
+      <h6>{{answer.category}}</h6>
+      <h6>{{answer.subject}}</h6>
+{{else}}
+    <li {{action 'answerShow'}}>{{answer.title}} | {{answer.author}}</li>
+{{/if}}
