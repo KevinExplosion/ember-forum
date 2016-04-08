@@ -1,0 +1,15 @@
+{ "answers": [{
+    "title": "Sample Answer",
+    "author": "John Doe",
+    "category": "Math",
+    "subject": "Addition",
+    "body": "I believe it is 4'"
+  }],
+  "questions": [{
+    "title": "Sample Question",
+    "author": "Jane Doe",
+    "category": "Math",
+    "subject": "Addition",
+    "body": "What is 2 + 2?"
+    }]
+}

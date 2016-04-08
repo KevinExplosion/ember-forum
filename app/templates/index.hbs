@@ -1,1 +1,23 @@
-<h3>Welcome</h3>
+<h3>Post Questions Here</h3>
+
+  <h4>Post your questions for below for others to answer</h4>
+
+  <h5>Click a title to see the question. Click the question to hide it again</h5>
+
+<hr>
+  <ul>
+    {{#each model as |answer|}}
+      <p>{{answer.title}}</p>
+      <p>{{answer.body}}</p>
+      <hr>
+    {{/each}}
+  </ul>
+
+  <!-- <ul>
+    {{#each model as |answer|}}
+      <p>{{answer.title}}</p>
+      <p>{{answer.body}}</p>
+    {{/each}}
+  </ul> -->
+
+  <!-- {{new-question save="save"}} -->
