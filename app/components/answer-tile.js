@@ -8,7 +8,11 @@ export default Ember.Component.extend({
         this.sendAction('destroyAnswer', answer);
       }
     },
-    
+
+    updateAnswer(answer, answerParams) {
+      this.sendAction('updateAnswer', answer, answerParams);
+    },
+
     answerShow: function() {
       this.set('isAnswerDetailed', true);
     },

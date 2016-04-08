@@ -6,18 +6,19 @@
 
 <hr>
   <ul>
-    {{#each model as |answer|}}
-      {{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+    {{#each model.answer as |answer|}}
+      {{answer-tile answer=answer updateAnswer= "updateAnswer" destroyAnswer="destroyAnswer"}}
     {{/each}}
   </ul>
 
   {{new-answer saveAnswer="saveAnswer"}}
 
-  <!-- <ul>
-    {{#each model as |answer|}}
+<br>
+  <ul>
+    {{#each model.question as |answer|}}
       <p>{{answer.title}}</p>
       <p>{{answer.body}}</p>
     {{/each}}
-  </ul> -->
+  </ul>
 
   <!-- {{new-question save="save"}} -->

@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('sign-in');
   this.route('sign-out');
   this.route('sign-up');
+  this.route('answer', {path: '/answer/:answer_id'});
 });
 
 export default Router;

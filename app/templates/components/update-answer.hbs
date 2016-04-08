@@ -1,7 +1,7 @@
-{{#if addNewAnswer}}
+{{#if updateAnswerForm}}
   <div class="row">
     <div class="col-md-4">
-      <h3>New Answer</h3>
+      <h3>Update {{answer.title}}</h3>
 
       <form>
 
@@ -62,12 +62,12 @@
 
       </form>
 
-      <button {{action 'saveAnswer'}}>Submit</button>
-      <button {{action 'answerFormHide'}}>Cancel</button>
+      <button {{action 'updateAnswer' answer}}>Submit Updated Answer</button>
+      <button {{action 'updateAnswerFormHide'}}>Cancel</button>
 
     </div>
   </div>
 
 {{else}}
-  <button {{action 'answerFormShow'}}>New Answer</button>
+  <button {{action 'updateAnswerForm'}}>Update Answer</button>
 {{/if}}
