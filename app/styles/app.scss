@@ -1,6 +1,7 @@
 $background-grey: #bdc3c7;
+$light-grey: #EEEEEE;
 
-#title {
+.title {
   height: 50px;
   padding-left: 15px;
   padding-top: 9px;
@@ -10,23 +11,23 @@ $background-grey: #bdc3c7;
   letter-spacing: 2px;
 }
 
-#title a {
+.title a {
   color: red;
   text-decoration: none;
 }
 
-#title a:visited {
+.title a:visited {
   color: red;
   text-decoration: none;
 }
 
-#title a:hover {
+.title a:hover {
   color: red;
   text-decoration: none;
   font-weight: bold;
 }
 
-#title a:active {
+.title a:active {
   color: red;
   text-decoration: none;
 }
@@ -38,10 +39,22 @@ h2 {
 .nav {
   float: right;
   list-style-type: none;
-  background-color: $background-grey;
+  // background-color: $background-grey;
   margin-right: 0;
   padding: 0;
   width: 200px;
   display: inherit;
-  height: 1100px;
+  // height: 1100px;
+}
+
+p {
+  background-color: $light-grey;
+  border-radius: 2px;
+  border: 1px solid black;
+  margin-right: 230px;
+  padding: 15px;
+}
+
+p:hover {
+  background-color: rgba(220, 220, 220, 1);
 }

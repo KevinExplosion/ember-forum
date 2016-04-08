@@ -20,8 +20,11 @@
 
   <ul>
     {{#each model.question as |question|}}
-      <li>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</li>
+      {{question-tile question=question updateQuestion="updateQuestion" destroyQuestion="destroyQuestion"}}
     {{/each}}
   </ul>
 
   {{new-question saveQuestion="saveQuestion"}}
+
+<!--
+    <li>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</li> -->

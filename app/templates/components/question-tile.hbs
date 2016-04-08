@@ -1,1 +1,14 @@
-{{yield}}
+{{#if isQuestionDetailed}}
+  {{#link-to 'question' question.id}}
+    <li>{{question.title}} | {{question.user}} {{question.question.title}}</li>
+  {{/link-to}}
+      <p {{action 'questionHide'}}>{{question.body}}</p>
+        <h6>{{question.category}}</h6>
+        <h6>{{question.subject}}</h6>
+{{else}}
+  <li {{action 'questionShow'}}>{{question.title}} | {{question.user}}</li>
+{{/if}}
+  <br>
+  {{update-question question=question updateQuestion="updateQuestion"}}
+  <br>
+  <button {{action 'delete' question}}>Delete Question</button>

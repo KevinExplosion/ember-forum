@@ -14,7 +14,7 @@ export default Ember.Component.extend({
     saveAnswer() {
       var answerParams = {
         title: this.get('title'),
-        author: this.get('author'),
+        user: this.get('user'),
         subject: this.get('subject'),
         category: this.get('category'),
         body: this.get('body'),

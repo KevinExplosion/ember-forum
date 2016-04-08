@@ -1,12 +1,11 @@
-<hr>
-{{#if addNewAnswer}}
+{{#if updateQuestionForm}}
   <div class="row">
     <div class="col-md-4">
-      <h3>New Answer</h3>
+      <h3>Update {{question.title}}</h3>
 
       <form>
 
-        <!-- <div class="form-group">
+        <div class="form-group">
           <div class="row">
             <div class="col-md-3">
               <label for="title">Title</label>
@@ -15,7 +14,7 @@
               {{input value=title id="title"}}
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div class="form-group">
           <div class="row">
@@ -63,12 +62,12 @@
 
       </form>
 
-      <button {{action 'saveAnswer'}}>Submit</button>
-      <button {{action 'answerFormHide'}}>Cancel</button>
+      <button {{action 'updateQuestion' question}}>Submit Updated Question</button>
+      <button {{action 'updateQuestionFormHide'}}>Cancel</button>
 
     </div>
   </div>
 
 {{else}}
-  <button {{action 'answerFormShow'}}>New Answer</button>
+  <button {{action 'updateQuestionForm'}}>Update Question</button>
 {{/if}}

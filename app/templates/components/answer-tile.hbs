@@ -1,16 +1,14 @@
 {{#if isAnswerDetailed}}
   {{#link-to 'answer' answer.id}}
-    <li>{{answer.title}} | {{answer.author}} in {{answer.question.title}}</li>
+    <li>{{answer.title}} | {{answer.user}} in {{answer.question.title}}</li>
   {{/link-to}}
       <p {{action 'answerHide'}}>{{answer.body}}</p>
         <h6>{{answer.category}}</h6>
         <h6>{{answer.subject}}</h6>
 {{else}}
-  <li {{action 'answerShow'}}>{{answer.title}} | {{answer.author}}</li>
+  <li {{action 'answerShow'}}>{{answer.title}} | {{answer.user}}</li>
 {{/if}}
   <br>
   {{update-answer answer=answer updateAnswer="updateAnswer"}}
   <br>
   <button {{action 'delete' answer}}>Delete Answer</button>
-
-  <hr>
