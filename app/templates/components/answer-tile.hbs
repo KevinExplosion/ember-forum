@@ -4,5 +4,8 @@
       <h6>{{answer.category}}</h6>
       <h6>{{answer.subject}}</h6>
 {{else}}
-    <li {{action 'answerShow'}}>{{answer.title}} | {{answer.author}}</li>
+  <li {{action 'answerShow'}}>{{answer.title}} | {{answer.author}}</li>
 {{/if}}
+
+  <br>
+  <button {{action 'delete' answer}}>Delete Answer</button>
