@@ -1,6 +1,6 @@
 {{#if isAnswerDetailed}}
   {{#link-to 'answer' answer.id}}
-    <li>{{answer.title}} | {{answer.author}}</li>
+    <li>{{answer.title}} | {{answer.author}} in {{answer.question.title}}</li>
   {{/link-to}}
       <p {{action 'answerHide'}}>{{answer.body}}</p>
         <h6>{{answer.category}}</h6>

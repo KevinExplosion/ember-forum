@@ -15,10 +15,11 @@
 
 <br>
   <ul>
-    {{#each model.question as |answer|}}
-      <p>{{answer.title}}</p>
-      <p>{{answer.body}}</p>
+    {{#each model.question as |question|}}
+      <li>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</li>
     {{/each}}
   </ul>
+
+  {{new-question saveQuestion="saveQuestion"}}
 
   <!-- {{new-question save="save"}} -->
