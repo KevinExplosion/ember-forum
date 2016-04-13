@@ -5,7 +5,13 @@
       <li>{{#link-to 'index'}}Home{{/link-to}}</li>
       <li>{{#link-to 'sign-in'}}Sign-in{{/link-to}}</li>
       <li>{{#link-to 'sign-up'}}Sign-up{{/link-to}}</li>
-      <li>{{#link-to 'sign-out'}}Sign-out{{/link-to}}</li>
+      <li>
+        {{#if session.isAuthenticated}}
+          <button class='btn btn-default' {{action   'signOut'}}>
+            {{fa-icon 'sign-out'}} Sign Out
+          </button>
+        {{/if}}
+      </li>
     </ul>
 
 <div class="container">
