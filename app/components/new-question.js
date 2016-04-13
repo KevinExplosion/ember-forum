@@ -16,6 +16,7 @@ export default Ember.Component.extend({
         title: this.get('title'),
         user: this.get('user'),
         subject: this.get('subject'),
+        date: this.get('date'),
         category: this.get('category'),
         body: this.get('body'),
       };
