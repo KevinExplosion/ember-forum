@@ -1,1 +1,21 @@
-{{outlet}}
+<div class="row">
+  <div class="col-sm-3">
+    <h3>Sign Up</h3>
+
+      {{input
+        type='text'
+        class='form-control'
+        value=email
+        placeholder='email'
+      }}
+      {{input
+        type='password'
+        class='form-control'
+        value=password
+        placeholder='password'
+      }}
+    <button class='btn btn-default' {{action 'signUp'}}>
+    {{fa-icon 'user-plus'}} Sign Up
+    </button>
+  </div>
+</div>
