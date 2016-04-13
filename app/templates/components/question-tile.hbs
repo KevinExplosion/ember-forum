@@ -1,10 +1,10 @@
 {{#if isQuestionDetailed}}
   {{#link-to 'question' question.id}}
-    <li>{{question.title}} | {{question.user}} {{question.question.title}}</li>
+    <li><h3>{{questionAndUser}}</h3></li>
   {{/link-to}}
       <p {{action 'questionHide'}}>{{question.body}}</p>
-        <h6>{{question.category}}</h6>
-        <h6>{{question.subject}}</h6>
+        <h4>Category: {{question.category}}</h4>
+        <h5>Subject: {{question.subject}}</h5>
 {{else}}
   <li {{action 'questionShow'}}>{{question.title}} | {{question.user}}</li>
 {{/if}}
