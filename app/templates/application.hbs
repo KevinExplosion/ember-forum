@@ -15,5 +15,38 @@
     </ul>
 
 <div class="container">
+
+<div class="row">
+  <div class="col-md-9">
+    {{#if session.isAuthenticated}}
+      <div class='page-header'>
+          <h1>Welcome, you are signed in!</h1>
+      </div>
+      <div class='panel panel-default'>
+          <div class='panel-heading'>{{session.currentUser.email}}</div>
+          <div class='panel-body'>
+              <img src='{{session.currentUser.profileImageURL}}' />
+          </div>
+      </div>
+    {{/if}}
+  </div>
+</div>
+
   {{outlet}}
 </div>
+
+
+
+<!--
+
+<div class='page-header'>
+    <h1>Welcome, you are signed in!</h1>
+</div>
+<div class='panel panel-default'>
+    <div class='panel-heading'>{{session.currentUser.email}}</div>
+    <div class='panel-body'>
+        <img src='{{session.currentUser.profileImageURL}}' />
+    </div>
+</div>
+
+-->
