@@ -12,8 +12,11 @@
     {{/each}}
   </ul>
 
+{{#if session.isAuthenticated}}
   {{new-answer saveAnswer="saveAnswer"}}
-
+{{else}}
+  <p>You must be signed in to create new answers</p>
+{{/if}}
 <br>
 <hr>
 
@@ -25,7 +28,11 @@
     {{/each}}
   </ul>
 
+{{#if session.isAuthenticated}}
   {{new-question saveQuestion="saveQuestion"}}
+{{else}}
+  <p>You must be signed in to create new questions</p>
+{{/if}}
 
 <!--
     <li>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</li> -->
