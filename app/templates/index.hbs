@@ -2,10 +2,11 @@
 
 <hr>
 <h3>Questions</h3>
-
 <ul>
   {{#each model.question as |question|}}
+  <div class="homeQuestion">
   {{question-tile question=question updateQuestion="updateQuestion" destroyQuestion="destroyQuestion"}}
+</div>
   {{/each}}
 </ul>
 
@@ -14,19 +15,18 @@
 {{else}}
 <p>You must be signed in to create new questions</p>
 {{/if}}
-
 <hr>
 
-<h4>Answers</h4>
+<!-- <h4>Answers</h4>
   <ul>
     {{#each model.answer as |answer|}}
       {{answer-tile answer=answer updateAnswer= "updateAnswer" destroyAnswer="destroyAnswer"}}
     {{/each}}
-  </ul>
+  </ul> -->
 
-{{#if session.isAuthenticated}}
+<!-- {{#if session.isAuthenticated}}
   {{new-answer saveAnswer="saveAnswer"}}
 {{else}}
   <p>You must be signed in to create new answers</p>
 {{/if}}
-<br>
+<br> -->
