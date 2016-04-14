@@ -1,13 +1,10 @@
-{{#if isQuestionDetailed}}
-  {{#link-to 'question' question.id}}
-    <li><h4>{{question-popularity question}}{{questionAndUser}}</h4></li>
-  {{/link-to}}
-      <p {{action 'questionHide'}}>{{question.body}}</p>
-        <h4>Category: {{question.category}}</h4>
-        <h5>Subject: {{question.subject}}</h5>
-{{else}}
-  <li {{action 'questionShow'}}><h4>{{questionAndUser}}</h4></li>
-{{/if}}
+{{#link-to 'question' question.id}}
+  <li><h4>{{question-popularity question}}{{questionAndUser}}</h4></li>
+{{/link-to}}
+  <p>{{question.body}}</p>
+    <h4>Category: {{question.category}}</h4>
+    <h5>Subject: {{question.subject}}</h5>
+
   <br>
   {{update-question question=question updateQuestion="updateQuestion"}}
   <br>

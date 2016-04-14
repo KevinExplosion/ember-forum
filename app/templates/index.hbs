@@ -5,7 +5,23 @@
   <h5>Click a title to see the question. Click the question to hide it again</h5>
 
 <hr>
-<h3>Answers</h3>
+<h3>Questions</h3>
+
+<ul>
+  {{#each model.question as |question|}}
+  {{question-tile question=question updateQuestion="updateQuestion" destroyQuestion="destroyQuestion"}}
+  {{/each}}
+</ul>
+
+{{#if session.isAuthenticated}}
+{{new-question saveQuestion="saveQuestion"}}
+{{else}}
+<p>You must be signed in to create new questions</p>
+{{/if}}
+
+<hr>
+
+<h4>Answers</h4>
   <ul>
     {{#each model.answer as |answer|}}
       {{answer-tile answer=answer updateAnswer= "updateAnswer" destroyAnswer="destroyAnswer"}}
@@ -18,21 +34,3 @@
   <p>You must be signed in to create new answers</p>
 {{/if}}
 <br>
-<hr>
-
-<h3>Questions</h3>
-
-  <ul>
-    {{#each model.question as |question|}}
-      {{question-tile question=question updateQuestion="updateQuestion" destroyQuestion="destroyQuestion"}}
-    {{/each}}
-  </ul>
-
-{{#if session.isAuthenticated}}
-  {{new-question saveQuestion="saveQuestion"}}
-{{else}}
-  <p>You must be signed in to create new questions</p>
-{{/if}}
-
-<!--
-    <li>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</li> -->
