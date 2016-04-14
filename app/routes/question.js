@@ -21,7 +21,7 @@ export default Ember.Route.extend({
 
     question.get('answer').addObject(newAnswer);
     newAnswer.saveAnswer().then(function() {
-      return question.save();
+      return answer.save();
     });
   }
 });
